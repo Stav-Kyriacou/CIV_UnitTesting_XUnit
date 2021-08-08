@@ -1,4 +1,6 @@
-﻿namespace CalcLib {
+﻿using System;
+
+namespace CalcLib {
     public class RecursiveCalc {
                
         /// <summary>
@@ -8,6 +10,11 @@
         /// <param name="ans"></param>
         /// <returns></returns>
         public int FactorialRec(int input, int ans) {
+            if (input < 0)
+            {
+                throw new StackOverflowException();
+            }
+
             if (input == 0) {
                 return ans;
             }

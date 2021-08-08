@@ -9,9 +9,11 @@ namespace test
             var num = FibonacciRec(0,1,0);
 
             System.Console.WriteLine(num);
+
+            Console.WriteLine(FactorialRec(3, 1));
         }
 
-        public int FactorialRec(int input, int ans) {
+        public static int FactorialRec(int input, int ans) {
             if (input == 0) {
                 return ans;
             }

@@ -11,7 +11,17 @@ namespace Tests
         {
             RecursiveCalc calc = new RecursiveCalc();
 
-            Assert.Throws<DivideByZeroException>(() => calc.PrimeCheckRec(9, 1));
+            Assert.Throws<DivideByZeroException>(() => calc.PrimeCheckRec(9, 0));
         }
+
+        [Fact]
+        public void NegativeFactorialTest()
+        {
+            RecursiveCalc calc = new RecursiveCalc();
+
+            Assert.Throws<StackOverflowException>(() => calc.FactorialRec(-2, 1));
+
+        }
+
     }
 }
